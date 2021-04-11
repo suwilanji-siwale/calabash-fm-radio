@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calabash FM</string>
+    <string name="calabash_fm">CALABASH FM</string>
+    <string name="online_radio">Online Radio</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>

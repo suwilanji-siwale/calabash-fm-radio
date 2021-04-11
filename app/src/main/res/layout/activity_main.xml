@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="@color/colorPrimary">
+
+
+
+    <RelativeLayout
+        android:id="@+id/corned"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:background="@drawable/background_trans"
+        android:padding="@dimen/_15sdp"
+
+        >
+
+        <TextView
+            android:id="@+id/calabashName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calabash_fm"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_20ssp"
+            />
+
+        <TextView
+            android:id="@+id/onlineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_radio"
+            android:textColor="@color/colorTextHint"
+            android:fontFamily="@font/ubuntu_medium"
+            android:layout_below="@id/calabashName"
+            android:textSize="@dimen/_10ssp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+           android:padding="@dimen/_10sdp"
+            />
+
+    </RelativeLayout>
+
+
+    <com.gauravk.audiovisualizer.visualizer.BlastVisualizer
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/blast"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        custom:avDensity="0.8"
+        custom:avType="fill"
+        custom:avColor="@color/av_dark_blue"
+        custom:avSpeed="normal"
+        custom:layout_constraintTop_toBottomOf="@id/corned"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/layoutQuickActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorQuickActionBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imageAddNote"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/facebook_logo"
+            android:tint="@color/colorIcons"/>
+
+        <ImageView
+            android:id="@+id/imageAddImage"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ins_logo"
+            android:tint="@color/colorIcons"/>
+
+        <ImageView
+            android:id="@+id/imageAddWebLink"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/whatsapp_logo"
+            android:tint="@color/colorIcons"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageAddNoteMain"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/background_add_button"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@id/layoutQuickActions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layoutQuickActions"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
